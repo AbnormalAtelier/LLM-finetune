@@ -1,0 +1,4 @@
+docker build -f inference/Dockerfile -t fastapi-lora .
+
+docker run --gpus all -p 8000:8000 fastapi-lora
+

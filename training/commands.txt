@@ -1,0 +1,7 @@
+docker build -t llm-trainer ./training
+
+docker run --rm --gpus all \
+  -v "$(pwd)/data:/data:ro" \
+  -v "$(pwd)/fine-tuned-models:/fine-tuned-models" \
+  llm-trainer
+
